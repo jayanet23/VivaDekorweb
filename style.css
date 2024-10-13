@@ -12,6 +12,7 @@
     --black: #1F1F1F;
     --grey: #545454;
     --white: #FFFFFF;
+    --abumuda : #F1F1F1;
 }
 
 body {
@@ -57,15 +58,16 @@ nav .logo {
     border-radius: 7px;
     border: transparent;
     font-size: .9em;
+    cursor: pointer;
 }
 
 
 /* hero sec */
 .hero-section {
-    padding: 50px 0;
+    padding: 50px 0 50px;
     display: grid;
     grid-template-columns: 55% auto;
-    grid-template-rows:  1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     row-gap: 30px;
     column-gap: 20px;
 }
@@ -76,7 +78,7 @@ nav .logo {
     gap: 30px;
 }
 
-.hero-content1 h1{
+.hero-content1 h1 {
     font-size: 7em;
     font-weight: 500;
 }
@@ -90,11 +92,12 @@ nav .logo {
     position: relative;
 }
 
-.hero-image1 img{
+.hero-image1 img {
     width: 60%;
     position: absolute;
     height: 100%;
     right: 0;
+    object-fit: cover;
 }
 
 
@@ -102,6 +105,7 @@ nav .logo {
     width: 90%;
     height: 100%;
     z-index: 2;
+    object-fit: cover;
 }
 
 .hero-image2 {
@@ -126,13 +130,14 @@ nav .logo {
     border-radius: 7px;
     color: var(--white);
     font-size: 1em;
+    cursor: pointer;
 }
 
-.hero-content2  {
+.hero-content2 {
     position: relative;
 }
 
-.hero-content2 .record-work{
+.hero-content2 .record-work {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -142,7 +147,7 @@ nav .logo {
 }
 
 
-.record-work h2{
+.record-work h2 {
     font-size: 2.7em;
     font-weight: 400;
     color: var(--grey);
@@ -155,7 +160,7 @@ nav .logo {
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 70px;
-    padding: 0 0 50px;
+    padding: 50px 0 50px;
 }
 
 .services .title {
@@ -169,7 +174,9 @@ nav .logo {
     display: flex;
 }
 
-.services-item .s1,.s2,.s3 {
+.services-item .s1,
+.s2,
+.s3 {
     display: flex;
     gap: 30px;
 }
@@ -190,11 +197,192 @@ nav .logo {
     gap: 30px;
 }
 
+/* sec 4 */
+.section4 {
+    display: grid;
+    grid-template-columns: 45% 1fr;
+    gap: 70px;
+    padding: 50px 0 50px;
+}
+
+.section4 .content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 2fr 1fr 1fr 1fr;
+}
+
+.section4 .content h1 {
+    font-weight: 600;
+    color: var(--black);
+    font-size: 2.5em;
+}
+
+.section4 .content p {
+    color: var(--grey);
+}
+
+.section4 .content h5 {
+    font-weight: 600;
+    font-size: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section4 img {
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.section4 .content button {
+    width: 35%;
+    border: transparent;
+    border-radius: 4px;
+    background-color: var(--black);
+    color: var(--white);
+    cursor: pointer;
+}
 
 
+/* proses section */
+.proses-section {
+    display: grid;
+    grid-template-columns: 1fr 45%;
+    gap: 70px;
+    padding: 50px 0 50px;
+}
 
+.proses-section .proses-content {
+    display: grid;
+    grid-template-rows: 20% 1fr;
+}
 
+.proses-content .proses-list {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
 
+.proses-list .pj1,
+.pj2,
+.pj3 {
+    display: flex;
+    gap: 32px;
 
+}
 
+.pj1-text,
+.pj2-text,
+.pj3-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
+.proses-content h1 {
+    font-weight: 600;
+    color: var(--black);
+    font-size: 2.5em;
+}
+
+.proses-list h4 {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.proses-list p {
+    color: var(--grey);
+}
+
+/* testi sec */
+
+.testimoni-section {
+    display: grid;
+    grid-template-columns: 45% 1fr;
+    gap: 70px;
+    padding: 50px 0 100px;
+    position: relative;
+}
+
+.testimoni-section h1 {
+    font-weight: 600;
+    color: var(--black);
+    font-size: 3em;
+}
+
+.testimoni-section .testi-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    width: 90%;
+    bottom: 0;
+    right: 0;
+    height: 70%;
+    color: var(--white);
+}
+
+.testi-item img {
+    width: 15%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.item1 {
+    border: 25px solid var(--white);
+}
+
+.item1,
+.item2 {
+    display: grid;
+    grid-template-rows: .5fr 1fr 1fr;
+    gap: 20px;
+    background-color: var(--black);
+    padding: 40px;
+}
+
+.item1 p,
+.item2 p {
+    font-weight: 500;
+    font-size: 1.3em;
+    line-height: 1.6em;
+}
+
+.costumer-profil {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.item1 i, .item2 i {
+    font-size: 60px;
+}
+
+.name-location h5{
+    font-size: 1.2em;
+}
+
+.name-location span {
+    color: var(--grey);
+    font-weight: 500;
+}
+
+.name-location {
+    display: grid;
+    row-gap: 10px;
+}
+
+.arrow {
+    display: flex;
+    color: var(--black);
+    font-size: 50px;
+    gap: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 25px;
+}
+
+.arrow i {
+    background-color: var(--grey);
+    border-radius: 7px;
+    background-color: var(--abumuda);
+    padding: 0 5px;
+    cursor: pointer;
+}
