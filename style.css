@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Inter;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 :root {
@@ -23,6 +24,16 @@ body {
 
 img {
     width: 100%;
+    border-radius: 7px;
+    box-shadow: 1px 1px 1px rgb(0, 0, 0, 14%);
+}
+
+button {
+    cursor: pointer;
+}
+
+p {
+    line-height: 2rem;
 }
 
 
@@ -38,7 +49,7 @@ nav {
     top: 0;
     left: 0;
     z-index: 9999;
-    padding: 0 100px;
+    padding: 0 10vh;
     background-color: var(--white);
     box-shadow: 0 1px 5px 1px rgb(0, 0, 0, 14%);
 }
@@ -96,46 +107,202 @@ nav .close {
     margin-top: 100px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 43vw));
+    gap: 30px;
 }
+
+.hero-section img  {
+    height: 300px;
+    width: 70%;
+}
+
+.hero-image1 {
+    display: grid;
+    justify-items: end;
+}
+
+.hero-content1 {
+    display: grid;
+    gap: 16px;
+}
+
+.hero-content2 {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.hero-content2 .record-work {
+    display: flex;
+    gap: 16px;
+}
+
+.hero-content2 .btn-start button {
+    padding: 12px 24px;
+    border-radius: 4px;
+    border: transparent;
+    color: var(--white);
+    background-color: var(--black);
+}
+
+
+
+
 
 
 /* services sec */
+
+.services {
+    display: grid;
+    gap: 30px;
+}
+
 .services .services-item {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 16px;
 }
+
+.content {
+    display: grid;
+    gap: 4px;
+}
+
+.s1,
+.s2,
+.s3 {
+    display: flex;
+    gap: 16px;
+}
+
+.icon i {
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
 
 /* section4 */
 .section4 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
+
+.section4 .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.section4 .content h5 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.content button {
+    padding: 12px 24px;
+    border-radius: 4px;
+    border: transparent;
+    color: var(--white);
+    background-color: var(--black);
+    width: 30%;
+    white-space: nowrap;
+}
+
+
+
+
+
+
+
 
 /* proses sec */
 .proses-section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
+
+.proses-section .proses-content {
+    display: grid;
+    gap: 16px;
+}
+
+.pj1, .pj2, .pj3 {
+    display: flex;
+    gap: 16px;
+}
+
+.pj1-text, .pj2-text, .pj3-text {
+    display: grid;
+    gap: 4px;
+}
+
+.proses-content i {
+    font-size: 30px;
+}
+
+
+
 
 /* news letter sec */
 .news-letter {
     text-align: center;
+    display: grid;
+    gap: 30px;
 }
 
-/* footer */ 
+.news-letter input {
+    padding: 12px ;
+    border: 1px solid var(--abumuda);
+}
+
+.news-letter button {
+    padding: 12px 24px;
+    border-radius: 4px;
+    border: transparent;
+    color: var(--white);
+    background-color: var(--black);
+}
+
+/* footer */
 .footer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    background-color: var(--black);
+    color: var(--abumuda);
+    padding: 30px 10px 50px;
 }
 
 
+
+
+
+
+
+/* responsive design */
 @media (max-width:768px) {
-    .hero-section, .services .services-item, .section4, .proses-section {
+
+    .hero-section,
+    .services .services-item,
+    .section4,
+    .proses-section {
         grid-template-columns: 1fr;
     }
 
     .sign-up {
         display: none;
+    }
+
+    .hero-section img {
+        width: 100%;
     }
 }
 
@@ -146,3 +313,70 @@ nav .close {
     }
 }
 
+@media (min-width:830px) {
+
+    /* hero sec */
+    .hero-section .hero-content2 {
+        justify-content: space-around;
+    }
+
+    .hero-content1 h1 {
+        font-size: 5.5rem;
+        font-weight: 600;
+    }
+
+    .hero-content1 p {
+        font-size: 1.3rem;
+    }
+
+    .hero-content2 button {
+        width: 30%;
+        height: 50px;
+        font-size: 1rem;
+    }
+    .hero-content2 .record-work {
+        gap: 100px;
+    }
+
+    .record-work h2 {
+        font-size: 1.7em;
+    }
+
+    .record-work p {
+        font-size: 1.3rem;
+    }
+
+    /* serv sec */
+    .services-item {
+        font-size: 1.3rem;
+    }
+    
+    /* sec 4 */
+
+    .section4 img {
+        height: 400px;
+    }
+
+    .section4 p {
+        font-size: 1.3rem;
+    }
+
+    .section4 h5 {
+        font-size: 1.3rem;
+    }
+
+    /* proses sec */
+
+    .proses-section p {
+        font-size: 1.3rem;
+    }
+
+    .proses-section img {
+        height: 400px;
+    }
+
+    /* news sec */ 
+    .news-letter p {
+        font-size: 1.3rem;
+    }
+}
