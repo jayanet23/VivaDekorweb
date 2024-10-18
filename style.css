@@ -6,7 +6,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Inter;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 :root {
@@ -20,6 +19,7 @@ body {
     margin: 0 5vw 0;
     display: grid;
     gap: 50px;
+    overflow-x: hidden;
 }
 
 img {
@@ -30,6 +30,7 @@ img {
 
 button {
     cursor: pointer;
+    white-space: nowrap;
 }
 
 p {
@@ -49,7 +50,7 @@ nav {
     top: 0;
     left: 0;
     z-index: 9999;
-    padding: 0 10vh;
+    padding: 0 5vw;
     background-color: var(--white);
     box-shadow: 0 1px 5px 1px rgb(0, 0, 0, 14%);
 }
@@ -112,7 +113,7 @@ nav .close {
 
 .hero-section img  {
     height: 300px;
-    width: 70%;
+    width: 90%;
 }
 
 .hero-image1 {
@@ -142,6 +143,7 @@ nav .close {
     border: transparent;
     color: var(--white);
     background-color: var(--black);
+    width: 40%;
 }
 
 
@@ -211,8 +213,7 @@ nav .close {
     border: transparent;
     color: var(--white);
     background-color: var(--black);
-    width: 30%;
-    white-space: nowrap;
+    width: 40%;
 }
 
 
@@ -278,9 +279,39 @@ nav .close {
     gap: 30px;
     background-color: var(--black);
     color: var(--abumuda);
-    padding: 30px 10px 50px;
+    padding: 50px 5vw 0;
+    margin-left: -5vw;
+    margin-right: -5vw;
+    width: 100vw;
 }
 
+.footer p {
+    color: var(--abumuda);
+}
+
+.footer .medsos {
+    display: flex;
+    gap: 16px;
+}
+
+.footer .copyright {
+    padding: 16px 0;
+    background-color: var(--black);
+    margin-left: -5vw;
+    margin-right: -5vw;
+    width: 100vw;
+    color: rgb(210, 210, 210);
+    text-align: center;
+}
+
+
+.nav-mobile-version {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    background: var(--black);
+    color: var(--abumuda);
+}
 
 
 
@@ -304,7 +335,21 @@ nav .close {
     .hero-section img {
         width: 100%;
     }
+
+    nav .logo {
+        font-size: .9rem;
+    }
+
+    nav .bi-list {
+        display: block;
+        cursor: pointer;
+    }
 }
+
+
+
+
+
 
 
 @media (max-width:830px) {
@@ -326,7 +371,7 @@ nav .close {
     }
 
     .hero-content1 p {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .hero-content2 button {
@@ -343,12 +388,12 @@ nav .close {
     }
 
     .record-work p {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     /* serv sec */
     .services-item {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
     
     /* sec 4 */
@@ -358,17 +403,17 @@ nav .close {
     }
 
     .section4 p {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .section4 h5 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     /* proses sec */
 
     .proses-section p {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .proses-section img {
@@ -377,6 +422,6 @@ nav .close {
 
     /* news sec */ 
     .news-letter p {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 }
