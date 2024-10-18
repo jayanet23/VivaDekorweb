@@ -76,6 +76,8 @@ nav i {
 nav .close {
     display: none;
     color: var(--white);
+    z-index: 99999;
+    cursor: pointer;
 }
 
 
@@ -305,15 +307,6 @@ nav .close {
 }
 
 
-.nav-mobile-version {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-    background: var(--black);
-    color: var(--abumuda);
-}
-
-
 
 
 
@@ -353,8 +346,32 @@ nav .close {
 
 
 @media (max-width:830px) {
-    .nav-list {
+    .nav-list .nav-menu {
         display: none;
+        position: absolute;
+        right: 0;
+        top: 0;
+        left: 0;
+        text-align: center;
+        gap: 50px;
+        padding: 50px;
+        background-color: var(--black);
+    }
+
+    .nav-list ul li {
+        padding: 10px 30vw;
+    }
+
+    .nav-list ul li:active {
+        background-color: var(--white);
+    }
+
+    .nav-list .nav-menu li a {
+        color: var(--white);
+    }
+
+    .nav-list .nav-menu li a:hover {
+        color: var(--white);
     }
 }
 
@@ -371,7 +388,7 @@ nav .close {
     }
 
     .hero-content1 p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .hero-content2 button {
@@ -388,12 +405,12 @@ nav .close {
     }
 
     .record-work p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     /* serv sec */
     .services-item {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     
     /* sec 4 */
@@ -403,17 +420,17 @@ nav .close {
     }
 
     .section4 p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .section4 h5 {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     /* proses sec */
 
     .proses-section p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 
     .proses-section img {
@@ -422,6 +439,6 @@ nav .close {
 
     /* news sec */ 
     .news-letter p {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 }
