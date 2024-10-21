@@ -15,6 +15,10 @@
     --abumuda: #F1F1F1;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin: 0 5vw 0;
     display: grid;
@@ -59,13 +63,6 @@ nav .logo {
     font-size: 1.3em;
 }
 
-nav i {
-    display: none;
-    font-size: 30px;
-    cursor: pointer;
-}
-
-
 
 .nav-list ul {
     display: flex;
@@ -73,15 +70,9 @@ nav i {
     gap: 30px;
 }
 
-nav .close {
+nav i {
     display: none;
-    color: var(--white);
-    z-index: 99999;
-    cursor: pointer;
 }
-
-
-
 
 .nav-list ul li a {
     text-decoration: none;
@@ -104,6 +95,54 @@ nav .close {
     cursor: pointer;
 }
 
+.dropdown {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 70px;
+    background-color: var(--black);
+    text-align: center;
+    gap: 30px;
+    height: 0;
+    overflow: hidden;
+    transition: height .5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown.open {
+    height: 360px;
+}
+
+.drop-link {
+    list-style: none;
+    display: grid;
+    gap: 30px;
+    padding: 20px 50px;
+}
+
+.drop-link li {
+    padding: 10px 50px;
+    border-radius: 10px;
+}
+
+.drop-link li a {
+    text-decoration: none;
+    color: var(--abumuda);
+}
+
+.drop-link li:hover {
+    background-color: var(--grey);
+}
+
+.dropdown .mobile-sign-up {
+    background-color: var(--white);
+    color: var(--black);
+    padding: 10px 20px;
+    border-radius: 7px;
+    border: transparent;
+    font-size: .9em;
+    cursor: pointer;
+}
+
 
 /* hero sec */
 .hero-section {
@@ -111,9 +150,10 @@ nav .close {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 43vw));
     gap: 30px;
+    scroll-margin-top: 80px;
 }
 
-.hero-section img  {
+.hero-section img {
     height: 300px;
     width: 90%;
 }
@@ -158,6 +198,7 @@ nav .close {
 .services {
     display: grid;
     gap: 30px;
+    scroll-margin-top: 80px;
 }
 
 .services .services-item {
@@ -221,10 +262,6 @@ nav .close {
 
 
 
-
-
-
-
 /* proses sec */
 .proses-section {
     display: grid;
@@ -237,12 +274,16 @@ nav .close {
     gap: 16px;
 }
 
-.pj1, .pj2, .pj3 {
+.pj1,
+.pj2,
+.pj3 {
     display: flex;
     gap: 16px;
 }
 
-.pj1-text, .pj2-text, .pj3-text {
+.pj1-text,
+.pj2-text,
+.pj3-text {
     display: grid;
     gap: 4px;
 }
@@ -259,10 +300,11 @@ nav .close {
     text-align: center;
     display: grid;
     gap: 30px;
+    scroll-margin-top: 70px;
 }
 
 .news-letter input {
-    padding: 12px ;
+    padding: 12px;
     border: 1px solid var(--abumuda);
 }
 
@@ -311,7 +353,7 @@ nav .close {
 
 
 
-/* responsive design */
+/* responsive */
 @media (max-width:768px) {
 
     .hero-section,
@@ -321,6 +363,7 @@ nav .close {
         grid-template-columns: 1fr;
     }
 
+    .nav-list .link,
     .sign-up {
         display: none;
     }
@@ -333,47 +376,19 @@ nav .close {
         font-size: .9rem;
     }
 
-    nav .bi-list {
+    nav i {
         display: block;
+        font-size: 25px;
         cursor: pointer;
     }
+
+    .dropdown {
+        display: block;
+    }
+
 }
 
 
-
-
-
-
-
-@media (max-width:830px) {
-    .nav-list .nav-menu {
-        display: none;
-        position: absolute;
-        right: 0;
-        top: 0;
-        left: 0;
-        text-align: center;
-        gap: 50px;
-        padding: 50px;
-        background-color: var(--black);
-    }
-
-    .nav-list ul li {
-        padding: 10px 30vw;
-    }
-
-    .nav-list ul li:active {
-        background-color: var(--white);
-    }
-
-    .nav-list .nav-menu li a {
-        color: var(--white);
-    }
-
-    .nav-list .nav-menu li a:hover {
-        color: var(--white);
-    }
-}
 
 @media (min-width:830px) {
 
@@ -396,6 +411,7 @@ nav .close {
         height: 50px;
         font-size: 1rem;
     }
+
     .hero-content2 .record-work {
         gap: 100px;
     }
@@ -412,7 +428,7 @@ nav .close {
     .services-item {
         font-size: 1.1rem;
     }
-    
+
     /* sec 4 */
 
     .section4 img {
@@ -437,7 +453,7 @@ nav .close {
         height: 400px;
     }
 
-    /* news sec */ 
+    /* news sec */
     .news-letter p {
         font-size: 1.1rem;
     }
